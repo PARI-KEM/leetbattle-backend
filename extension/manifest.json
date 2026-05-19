@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "LeetBattle",
+  "version": "0.1.0",
+  "description": "Multiplayer LeetCode battles with shareable room codes, timer, and chat.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "http://localhost:8080/*",
+    "https://leetcode.com/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "LeetBattle"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/*"],
+      "css": ["src/content/leetcode-panel.css"],
+      "js": ["lib/api.js", "src/content/leetcode.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
