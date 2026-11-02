@@ -5,4 +5,4 @@ services:
     dockerfilePath: ./leetcodeBattle/Dockerfile
     dockerContext: ./leetcodeBattle
     plan: free
-    healthCheckPath: /
+    healthCheckPath: /health
