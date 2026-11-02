@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: leetbattle-backend
+    runtime: docker
+    dockerfilePath: ./leetcodeBattle/Dockerfile
+    dockerContext: ./leetcodeBattle
+    plan: free
+    healthCheckPath: /
