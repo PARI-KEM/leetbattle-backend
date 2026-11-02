@@ -6,7 +6,7 @@
 
 // Edit this line to point at your deployed backend before zipping for friends.
 // Each user can also override it later via the extension popup.
-const DEFAULT_BACKEND_URL = 'http://localhost:8080';
+const DEFAULT_BACKEND_URL = 'https://leetbattle-backend.onrender.com';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.get(['backendUrl'], (res) => {

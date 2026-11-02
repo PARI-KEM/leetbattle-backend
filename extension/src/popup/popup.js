@@ -12,7 +12,7 @@
   }
 
   document.getElementById('save').addEventListener('click', async () => {
-    const url = backendInput.value.trim() || 'http://localhost:8080';
+    const url = backendInput.value.trim() || 'https://leetbattle-backend.onrender.com';
     await LeetBattleAPI.setBackend(url);
     setStatus('Saved.');
   });

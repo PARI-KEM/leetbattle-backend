@@ -1,5 +1,5 @@
 (function (global) {
-  const DEFAULT_BACKEND = 'http://localhost:8080';
+  const DEFAULT_BACKEND = 'https://leetbattle-backend.onrender.com';
 
   function getBackend() {
     return new Promise((resolve) => {
